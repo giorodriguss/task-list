@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <title>To-do List</title>
+</head>
+<body>
+    <h1> Lista de Tarefas </h1>
+    <main class="list">
+        <div class="list-column" data-id="1">
+            <div class="list-title">
+                <h2>
+                    Pendentes
+                </h2>
+
+                <button class="add-card">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="to-do-cards">
+                
+            </div>
+        </div>
+
+        <div class="list-column" data-id="2">
+            <div class="list-title">
+                <h2>
+                    Concluídas
+                </h2>
+            </div>
+            <div class="to-do-cards">
+                
+            </div>
+        </div>
+
+        <!-- Modal para criar tarefa-->
+        <dialog id="dialog-create-task">
+            <h3>Criar nova tarefa</h3>
+            <form id="form-create-task">
+                <!-- Nome da Tarefa -->
+                <label for="nome">Nome da Tarefa</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite o nome da tarefa" />
+        
+                <!-- Custo -->
+                <label for="custo">Custo (R$)</label>
+                <input type="number" id="custo" name="custo" required placeholder="0.00" min="0" step="0.01" />
+        
+                <!-- Data Limite -->
+                <label for="data-limite">Data Limite</label>
+                <input type="date" id="data-limite" name="dataExp" required />
+        
+                <!-- Botões de Ação -->
+                <div class="dialog-actions">
+                    <button type="submit" id="criar_tarefa">Criar tarefa</button>
+                    <button class="fechar-modal" type="button">Cancelar</button>
+                </div>
+            </form>
+        </dialog>        
+
+
+        <!-- Modal para editar tarefa -->
+        <dialog id="dialog-edit-task">
+            <h3>Editar tarefa</h3>
+            <form id="form-edit-task">
+                <div>
+                    <label for="edit-nome">Nome</label>
+                    <input type="text" id="edit-nome" required />
+                </div>
+                <div>
+                    <label for="edit-custo">Custo</label>
+                    <input type="number" id="edit-custo" required />
+                </div>
+                <div>
+                    <label for="edit-data-limite">Data de Expiração</label>
+                    <input type="date" id="edit-data-limite" required />
+                </div>
+            <div class="dialog-actions">
+                <button type="submit" id="editar_tarefa">Salvar</button>
+                <button class="fechar-edit" type="button">Cancelar</button>
+            </div>
+        </dialog>
+    </main>
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
