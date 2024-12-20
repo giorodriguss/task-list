@@ -27,4 +27,4 @@ Este é um projeto de uma **Lista de Tarefas** desenvolvida para gerenciar taref
 1. Clone este repositório:
 
    git clone https://github.com/giorodriguss/task-list.git
->>>>>>> d255b8dfe452844ff9f0876e07ff4c3bd1a40492
+
